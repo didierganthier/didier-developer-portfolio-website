@@ -1,8 +1,8 @@
 const userData = {
-  githubUsername: "manuarora700",
-  name: "Manu Arora",
+  githubUsername: "didierganthier",
+  name: "Didier Ganthier",
   designation: "Full-Stack Developer",
-  avatarUrl: "/avatar.png",
+  avatarUrl: "https://avatars.githubusercontent.com/u/45739963?v=4",
   email: "manuarorawork@gmail.com",
   phone: "+91 9587738861",
   address: "Jaipur, Rajasthan, India.",
@@ -106,7 +106,7 @@ const userData = {
   resumeUrl:
     "https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing",
   socialLinks: {
-    instagram: "https://instagram.com/maninthere",
+    instagram: "https://instagram.com/didierganthier",
     twitter: "https://twitter.com/mannupaaji",
     linkedin: "https://linkedin.com/in/manuarora28",
     github: "https://github.com/manuarora700",
