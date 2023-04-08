@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^2.4.1",
     "axios": "^0.21.1",
     "next": "latest",
     "next-themes": "latest",

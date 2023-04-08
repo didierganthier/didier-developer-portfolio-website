@@ -1,7 +1,14 @@
 import React from "react";
 import userData from "@constants/data";
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
+
+  const [state, handleSubmit] = useForm("mlekoevg");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased">
@@ -141,23 +148,35 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col">
+          <form onSubmit={handleSubmit} action="https://formspree.io/f/mlekoevg" method="POST" className="form rounded-lg bg-white p-4 flex flex-col">
             <label htmlFor="name" className="text-sm text-gray-600 mx-4">
               {" "}
               Your Name
             </label>
             <input
+              id="name"
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="name"
+            />
+            <ValidationError
+              prefix="Name"
+              field="name"
+              errors={state.errors}
             />
             <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
               Email
             </label>
             <input
-              type="text"
+              id="email"
+              type="email"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
             <label
               htmlFor="message"
@@ -166,13 +185,20 @@ export default function Contact() {
               Message
             </label>
             <textarea
+              id="message"
               rows="4"
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
             ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
             <button
               type="submit"
+              disabled={state.submitting}
               className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >
               Send Message
