@@ -37,6 +37,7 @@ export default function FavouriteProjects() {
           {/* Single card */}
           <a
             href="https://bookstore-react-sand.vercel.app/"
+            target="_blank"
             className="w-full block col-span-3 shadow-2xl"
           >
             <div className="relative overflow-hidden">
@@ -56,6 +57,7 @@ export default function FavouriteProjects() {
           {/* Single card */}
           <a
             href="https://math-magicians-didier.netlify.app/"
+            target="_blank"
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
           >
             <div className="relative overflow-hidden">
@@ -76,6 +78,7 @@ export default function FavouriteProjects() {
           {/* Single card */}
           <a
             href="https://budget-app-rails.onrender.com/"
+            target="_blank"
             className="w-full block col-span-3 sm:col-span-1  object-cover"
           >
             <div className="relative overflow-hidden shadow-2xl">
