@@ -11,26 +11,31 @@ const userData = {
       title: "Maths Magicians",
       link: "https://math-magicians-didier.netlify.app/",
       imgUrl: "/maths.png",
+      code : "https://github.com/didierganthier/math-magicians",
     },
     {
       title: "Bookstore React",
       link: "https://bookstore-react-sand.vercel.app/",
       imgUrl: "/bookstore.png",
+      code : "https://github.com/didierganthier/bookstore-react",
     },
     {
       title: "Portfolio",
       link: "https://bit.ly/didierganthier",
       imgUrl: "/portfolionice.png",
+      code : "https://github.com/didierganthier/didierganthier-homepage",
     },
     {
       title: "Todo List",
       link: "https://didierganthier.github.io/todo-list/",
       imgUrl: "/todolist.png",
+      code : "https://github.com/didierganthier/todo-list",
     },
     {
       title: "Budget App",
       link: "https://budget-app-rails.onrender.com/",
       imgUrl: "/budgetapp.png",
+      code : "https://github.com/didierganthier/budget_app",
     },
   ],
   about: {

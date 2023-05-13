@@ -18,6 +18,7 @@ export default function Projects() {
               link={proj.link}
               imgUrl={proj.imgUrl}
               number={`${idx + 1}`}
+              code={proj.code}
             />
           ))}
         </div>
@@ -26,9 +27,9 @@ export default function Projects() {
   );
 }
 
-const ProjectCard = ({ title, link, imgUrl, number }) => {
+const ProjectCard = ({ title, link, imgUrl, number, code }) => {
   return (
-    <a href={link} className="w-full block shadow-2xl" target="_blank">
+    <div className="w-full block shadow-2xl">
       <div className="relative overflow-hidden">
         <div className="h-72 object-cover">
           <img
@@ -43,7 +44,17 @@ const ProjectCard = ({ title, link, imgUrl, number }) => {
         <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
           {number.length === 1 ? "0" + number : number}
         </h1>
+        <a href={link} target="_blank" rel="noreferrer">
+          <div className="absolute top-10 right-10 text-gray-50 font-bold text-xl bg-red-300 rounded-md px-2">
+            Live Demo
+          </div>
+        </a>
+        <a href={code} target="_blank" rel="noreferrer">
+          <div className="absolute top-20 right-10 text-gray-50 font-bold text-xl bg-red-300 rounded-md px-2">
+            Source Code
+          </div>
+        </a>
       </div>
-    </a>
+    </div>
   );
 };
